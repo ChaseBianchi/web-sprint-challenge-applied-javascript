@@ -38,7 +38,7 @@ const tabsAppender = (selector) => {
   const appendLocation = document.querySelector(selector);
   axios.get('https://lambda-times-api.herokuapp.com/topics')
     .then(call => {
-      console.log(call.data['topics'])
+      // console.log(call.data['topics'])
       const newTab = Tabs(call.data['topics']);
       appendLocation.appendChild(newTab);
     })
